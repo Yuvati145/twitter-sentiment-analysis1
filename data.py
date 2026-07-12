@@ -40,15 +40,17 @@ def clean_text(text: str) -> str:
 # ------------------ Load & preprocess data ------------------
 @st.cache_data(show_spinner=False)
 def load_and_prepare(path: str, sample_n: int = 10000):
-    col_names = ["target", "ids", "date", "flag", "user", "text"]
-    df_full = pd.read_csv(path, encoding="latin-1", names=col_names)
-    df = df_full.sample(n=sample_n, random_state=42)
+    df = pd.read_csv(path)
+
+    # Keep only required columns
     df = df[["target", "text"]].dropna().copy()
-    df["target"] = df["target"].replace({4: 1, 0: 0})
+
+    # Clean the tweets
     df["clean_text"] = df["text"].astype(str).apply(clean_text)
+
     return df
 
-CSV_PATH = "training.1600000.processed.noemoticon.csv"
+CSV_PATH = "tweets1.csv"
 try:
     df = load_and_prepare(CSV_PATH, sample_n=10000)
 except FileNotFoundError:
@@ -122,7 +124,7 @@ if st.button("Analyze Sentiment"):
 st.markdown("---")
 
 # ------------------ Sample Data ------------------
-sample_df = df.sample(n=30, random_state=42).reset_index(drop=True)
+sample_df = df.sample(n=min(30, len(df)), random_state=42).reset_index(drop=True)
 sample_df["Sentiment"] = sample_df["text"].apply(predict_sentiment)
 df_live = sample_df[["text", "Sentiment"]].rename(columns={"text": "Tweet"})
 
