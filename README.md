@@ -80,6 +80,17 @@ The app will open in your browser at `http://localhost:8501`.
 4. **Predict** — any new text entered in the app is cleaned the same way, vectorized, and classified as Positive or Negative.
 5. **Visualize** — a random sample of tweets is scored and displayed as charts and a table so you can see the model's predictions at a glance.
 
+## Screenshots
+
+**Try it Yourself — live sentiment prediction**
+![Try it Yourself](screenshots/try-it-yourself.png)
+
+**Sentiment Distribution & Breakdown charts**
+![Charts](screenshots/charts.png)
+
+**Recent Tweets Analyzed table**
+![Recent Tweets Analyzed](screenshots/recent-tweets.png)
+
 ## Future Improvements
 
 - Support for a Neutral sentiment class (currently binary Positive/Negative)
