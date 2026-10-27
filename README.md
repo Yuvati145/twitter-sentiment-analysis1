@@ -83,7 +83,7 @@ The app will open in your browser at `http://localhost:8501`.
 ## Screenshots
 
 **Try it Yourself — live sentiment prediction**
-![Try it Yourself](screenshots/try-it-yourself.png)
+
 
 **Sentiment Distribution & Breakdown charts**
 ![Charts](screenshots/charts.png)
