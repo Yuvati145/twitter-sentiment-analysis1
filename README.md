@@ -1,4 +1,4 @@
-# 💬 Twitter Sentiment Analysis Dashboard
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/58171f2e-1e49-47b6-9ce9-97b2eb4b83fa" /># 💬 Twitter Sentiment Analysis Dashboard
 
 A Streamlit web app that classifies tweets as **Positive 😊** or **Negative 😡** using a TF-IDF + Logistic Regression model trained on the fly, with an interactive dashboard to explore the results.
 
@@ -83,13 +83,17 @@ The app will open in your browser at `http://localhost:8501`.
 ## Screenshots
 
 **Try it Yourself — live sentiment prediction**
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/16ddf311-dc22-47da-85a6-a0f6512b21e5" />
+
 
 
 **Sentiment Distribution & Breakdown charts**
-![Charts](screenshots/charts.png)
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/5db5a581-d5bc-4dff-ae47-cbbe07df82d5" />
+
 
 **Recent Tweets Analyzed table**
-![Recent Tweets Analyzed](screenshots/recent-tweets.png)
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/2be46f6e-f538-46b8-8eb1-3953a6afb08c" />
+
 
 ## Future Improvements
 
